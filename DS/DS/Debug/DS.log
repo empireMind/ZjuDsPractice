@@ -1,6 +1,5 @@
-﻿  Program02.cpp
-  Program01.cpp
-  main.cpp
-  正在生成代码...
-  DS.vcxproj -> F:\DSPractice\DS\Debug\DS.exe
-  DS.vcxproj -> F:\DSPractice\DS\Debug\DS.pdb (Full PDB)
+﻿  Program03.cpp
+e:\dspractice\ds\ds\program03.cpp(36): warning C4101: “factor”: 未引用的局部变量
+e:\dspractice\ds\ds\program03.cpp(36): warning C4101: “expo”: 未引用的局部变量
+  DS.vcxproj -> E:\DSPractice\DS\Debug\DS.exe
+  DS.vcxproj -> E:\DSPractice\DS\Debug\DS.pdb (Full PDB)
