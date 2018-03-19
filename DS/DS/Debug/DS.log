@@ -1,5 +1,11 @@
-﻿  Program03.cpp
-e:\dspractice\ds\ds\program03.cpp(36): warning C4101: “factor”: 未引用的局部变量
-e:\dspractice\ds\ds\program03.cpp(36): warning C4101: “expo”: 未引用的局部变量
-  DS.vcxproj -> E:\DSPractice\DS\Debug\DS.exe
-  DS.vcxproj -> E:\DSPractice\DS\Debug\DS.pdb (Full PDB)
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : 文件“f:\zjudspractice\zjudspractice\ds\ds\debug\main.obj”正由另一进程使用，因此该进程无法访问此文件。
+  Program04.cpp
+  Program03.cpp
+f:\zjudspractice\zjudspractice\ds\ds\program03.cpp(51): warning C4101: “factor”: 未引用的局部变量
+f:\zjudspractice\zjudspractice\ds\ds\program03.cpp(51): warning C4101: “expo”: 未引用的局部变量
+  Program02.cpp
+  Program01.cpp
+  main.cpp
+  正在生成代码...
+  DS.vcxproj -> F:\ZjuDsPractice\ZjuDsPractice\DS\Debug\DS.exe
+  DS.vcxproj -> F:\ZjuDsPractice\ZjuDsPractice\DS\Debug\DS.pdb (Full PDB)

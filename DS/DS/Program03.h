@@ -11,7 +11,8 @@ public:
 		int expo;
 		Link* next;
 	}*pLink;
-
+	void Start();
+	void PrintLink(pLink);
 private:
 	int lenA;
 	int lenB;
@@ -21,6 +22,8 @@ private:
 	pLink linkCurrB;
 	void InitialLink(int&, pLink&, pLink&);
 	void LinkAdd(pLink, pLink, pLink&);
+	void LinkMultiply(pLink, pLink, pLink&);
+	void DeleteLink(pLink);
 };
 
 

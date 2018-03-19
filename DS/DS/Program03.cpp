@@ -10,7 +10,34 @@ Program03::Program03()
 
 Program03::~Program03()
 {
+	DeleteLink(linkHeadA);
+	DeleteLink(linkHeadB);
+}
 
+void Program03::Start()
+{
+	pLink linkMultiplyRes;
+	LinkMultiply(linkHeadA, linkHeadB, linkMultiplyRes);
+	PrintLink(linkMultiplyRes);
+	DeleteLink(linkMultiplyRes);
+	pLink linkAddRes;
+	LinkAdd(linkHeadA, linkHeadB, linkAddRes);	
+	PrintLink(linkAddRes);
+	DeleteLink(linkAddRes);
+}
+
+void Program03::PrintLink(pLink link)
+{
+	if (link->next == nullptr)
+		cout << link->factor << " " << link->expo;
+	while (link->next != nullptr)
+	{
+		link = link->next;
+		cout << link->factor << " " << link->expo;
+		if (link->next != nullptr)
+			cout << " ";
+	}
+	cout << endl;
 }
 
 void Program03::InitialLink(int& len, pLink& head, pLink& curr)
@@ -32,27 +59,119 @@ void Program03::InitialLink(int& len, pLink& head, pLink& curr)
 void Program03::LinkAdd(pLink linkA, pLink linkB, pLink& linkRes)
 {
 	linkRes = new Link();
-	pLink currA = linkA;
-	pLink currB = linkB;
-	//pLink currA = linkA->next;
-	//pLink currB = linkB->next;
-	//if (currA->expo > currB->expo)
-	//	linkRes->next = currA;
-	//else if(currA->expo < currB->expo)
-	//	linkRes->next = currB;
-	//else
-	//{
-	//	pLink sum = new Link();
-	//	sum->expo = currA->expo;
-	//	sum->factor = currA->factor + currB->factor;
-	//	linkRes->next = sum;
-	//}
-	while (currA->next != nullptr)
+	pLink currA = linkA->next;
+	pLink currB = linkB->next;
+	pLink currRes = linkRes;
+	while (currA != nullptr || currB != nullptr)
 	{
-		while (currB->next != nullptr)
+		if (currA == nullptr)
 		{
+			while (currB != nullptr)
+			{
+				pLink temp = new Link();
+				temp->expo = currB->expo;
+				temp->factor = currB->factor;
+				currRes->next = temp;
+				currB = currB->next;
+				currRes = currRes->next;
+			}
+			break;
+		}
+		if (currB == nullptr)
+		{
+			while (currA != nullptr)
+			{
+				pLink temp = new Link();
+				temp->expo = currA->expo;
+				temp->factor = currA->factor;
+				currRes->next = temp;
+				currA = currA->next;
+				currRes = currRes->next;
+			}
+			break;
+		}
 
+		if (currA->expo > currB->expo)
+		{
+			pLink temp = new Link();
+			temp->expo = currA->expo;
+			temp->factor = currA->factor;
+			currRes->next = temp;
+			currA = currA->next;
+			currRes = currRes->next;
+		}
+		else if (currA->expo < currB->expo)
+		{
+			pLink temp = new Link();
+			temp->expo = currB->expo;
+			temp->factor = currB->factor;
+			currRes->next = temp;
+			currB = currB->next;
+			currRes = currRes->next;
+		}
+		else
+		{
+			pLink temp = new Link();
+			temp->expo = currA->expo;
+			temp->factor = currA->factor + currB->factor;
+			if (temp->factor != 0)
+			{
+				currRes->next = temp;
+				currRes = currRes->next;
+			}
+			currA = currA->next;
+			currB = currB->next;
 		}
 	}
+}
+
+void Program03::LinkMultiply(pLink linkA, pLink linkB, pLink& linkRes)
+{
+	pLink currA = linkA->next;
+	pLink currB = linkB->next;
+	if (currA == nullptr || currB == nullptr)
+	{
+		linkRes = new Link();
+		return;
+	}
+	pLink* linkArr = new pLink[lenA];
+	for (int i = 0; i < lenA; i++)
+	{
+		pLink currLinkArr = (linkArr[i] = new Link());
+		while (currB != nullptr)
+		{
+			pLink temp = new Link();
+			temp->expo = currA->expo + currB->expo;
+			temp->factor = currA->factor * currB->factor;
+			currLinkArr->next = temp;
+			currLinkArr = currLinkArr->next;
+			currB = currB->next;
+		}
+		currA = currA->next;
+		currB = linkB->next;
+	}
+	pLink temp = new Link();
+	pLink res;
+	for (int i = 0; i < lenA; i++)
+	{
+		LinkAdd(temp, linkArr[i], res);
+		DeleteLink(temp);		
+		DeleteLink(linkArr[i]);
+		temp = res;
+	}	
+	delete[] linkArr;
+	linkRes = res;
+}
+
+void Program03::DeleteLink(pLink link)
+{
+	pLink curr = link;
+	pLink temp;
+	do
+	{
+		temp = curr->next;
+		delete curr;
+		curr = temp;
+	} while (temp != nullptr);		
 }
 
