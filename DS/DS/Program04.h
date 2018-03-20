@@ -15,13 +15,15 @@ public:
 		Link* next;
 	}* pLink;
 	void Start();
+	void PrintLink(pLink);
 private:
 	string start;
 	int len;
 	int position;
 	pLink head;
+	pLink CreateLink(pLink);
 	pLink FindElement(pLink, string);
-	pLink FindPositionElement(pLink, int);
+	pLink FindPositionElement(pLink, int, bool&);
 	pLink FindLastElement(pLink);
 };
 
