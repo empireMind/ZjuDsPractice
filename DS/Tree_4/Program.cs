@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tree_4
 {
@@ -10,6 +6,8 @@ namespace Tree_4
     {
         static void Main(string[] args)
         {
+            Tree_42.Execute();
+            Console.ReadKey();
         }
     }
 }
