@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree_5", "Tree_5\Tree_5.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "枚举器实现", "枚举器实现\枚举器实现.csproj", "{C0B25494-BFCF-4517-9DF6-6176C06E7A9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph_6", "Graph_6\Graph_6.csproj", "{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,18 @@ Global
 		{C0B25494-BFCF-4517-9DF6-6176C06E7A9D}.Release|x64.Build.0 = Release|Any CPU
 		{C0B25494-BFCF-4517-9DF6-6176C06E7A9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{C0B25494-BFCF-4517-9DF6-6176C06E7A9D}.Release|x86.Build.0 = Release|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Debug|x64.Build.0 = Debug|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Debug|x86.Build.0 = Debug|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Release|x64.ActiveCfg = Release|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Release|x64.Build.0 = Release|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Release|x86.ActiveCfg = Release|Any CPU
+		{698F37CB-4FEF-48D4-B186-0E65EA4B39B4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
