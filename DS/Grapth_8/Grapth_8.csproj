@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Graph_81.cs" />
     <Compile Include="Graph_82.cs" />
+    <Compile Include="Graph_83.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
